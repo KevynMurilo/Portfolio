@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131313;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transform: translateX(-50%);
+    transition: width 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.logo {
+    width: 40px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    margin-top: 15%;
+}
+
+.image-programador {
+    width: 250px;
+    border: 2px yellow dashed;
+    border-radius: 80px;
+}
+
+.text {
+    margin-top: -12%;
+    color: aliceblue;
+    margin-left: 28%;
+}
+
+.text h1 {
+    font-size: 2.5rem;
+}
+
+.text h2 {
+    font-size: 1rem;
+    color: yellow;
+}
+
+.text h3 {
+    font-size: 1rem;
+    margin-top: 1%;
+}
+
+.text h2 span {
+    border-right: 2px solid white;
+    animation: typing 5s steps(40) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+
+.about {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 85%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px;
+    margin-top: 20%;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    animation: floating 3s ease-in-out infinite alternate;
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.about .line {
+    margin-top: -1%;
+    margin-left: -0.8%;
+    width: 100%;
+    height: 4px;
+    background-color: #FFD700;
+    animation: floating 3s ease-in-out infinite alternate;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 1%;
+}
+
+.photo-about {
+    margin-left: 2%;
+    margin-top: 7%;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px yellow solid;
+}
+
+.text-about {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 2%;
+    text-align: justify;
+}
+
+
+.skills {
+    background-color: #131313;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 85%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.skills-links {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    margin-left: 4.5%;
+}
+
+.skills-link {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.skills-link.active {
+    border-bottom: 2px solid #FFD700;
+}
+
+.skills-content {
+    display: none;
+}
+
+.skills-content.active {
+    display: block;
+}
+
+.skill {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.title-skills{
+    display: flex;
+    margin-left: 6.5%;
+}
+
+
+.yellow-line {
+    margin-top: 1.5%;
+    width: 8%;
+    height: 2px;
+    background-color: #FFD700;
+}
+
+.past-projects {
+    text-align: center;
+    padding: 40px;
+    background-color: #131313;
+    color: white;
+}
+
+.past-projects h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.past-projects p {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Adicione essa linha */
+}
+
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+}
+
+.project-links {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.project-links a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.project-links img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Estilo para a seção de Contact */
+.contact {
+    background-color: #333;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #FFD700;
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #FFC107;
+}
+
+#send-button {
+    background-color: #FFD700;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Animação de flutuação */
+#send-button:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo durante o envio */
+#send-button.sending {
+    background-color: #4CAF50;
+    cursor: progress;
+    width: auto;
+    animation: fillButton 5s forwards;
+}
+
+@keyframes fillButton {
+    0% {
+        width: auto;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.footer {
+    background-color: #262626;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    position: static;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+}
+
+.footer-social a:hover {
+    opacity: 0.7;
+}
+
+.footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width: 1075px) { 
+    .text{
+        margin-top: -15%;
+        margin-left: 25%;
+    }
+}
+
+@media screen and (max-width: 965px) { 
+    .about{
+        height: auto;
+    }
+
+    .text{
+        margin-left: 15%;
+        margin-top: -20%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 3px;
+    }
+
+    .navbar-left{
+        font-size: 0.7rem;
+        font-weight: bold;
+        margin: -1%;
+    }
+
+    .logo{
+        display: flex;
+        margin-top: -5%;
+        margin: -30%;
+        width: 25px;
+
+    }
+
+    .navbar-center{
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+
+
+    .box {
+        margin: 10% auto;
+        text-align: center;
+    }
+
+    .image-programador {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 20%;
+    }
+
+    .text {
+        margin-top: 10%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .about {
+        margin: 80px auto;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    .photo-about {
+        margin-right: 2%;
+        margin-top: 15%;
+        width: 80%;
+    }
+
+    .text-about {
+        margin-left: 0;
+    }
+
+
+    .yellow-line{
+        margin-top: 3%;
+    }
+
+    .skills-content{
+        justify-content: center;
+    }
+
+    .skills-links {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .skills-link {
+        margin: 0 10px;
+        margin-top: 0;
+    }
+
+    .title-skills {
+        margin-left: 0;
+    }
+
+    .contact {
+        padding: 40px 10px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-links a {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .navbar-left{
+        font-size: 0.6rem;
+    }
+
+    .navbar-center{
+        font-size: 0.6rem;
+    }
+
+    .yellow-line{
+        margin-top: 8%;
+    }
+    .about{
+        margin-left: 8.5%;
+    }
+    
+    .project-cards{
+        margin-left: 4%;
+    }
+
+}
+
+@media screen and (max-width: 333px) {
+    .navbar-left{
+        font-size: 0.5rem;
+    }
+
+    .navbar-center{
+        font-size: 0.5rem;
+    }
+
+    .yellow-line{
+        margin-top: 8%;
+    }
+
+    .skills-content{
+        margin-left: -15%;
+    }
+
+    .about {
+        margin-left: 8.5%;
+    }
+
+    .skills-content{
+        justify-content: center;
+        margin-left: -8%;
+    }
+    
+
+}

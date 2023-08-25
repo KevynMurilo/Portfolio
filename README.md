@@ -4,7 +4,7 @@ Este é um modelo de site de portfólio, criado para fins de demonstração e pr
 
 Link: https://portfoliokevyn.netlify.app/
 
-![portfolio](https://github.com/KevynMurilo/Portfolio/assets/132490286/5c7c7595-d9bd-445e-ab15-b9e57bf009a6)
+![modelport](https://github.com/KevynMurilo/Portfolio/assets/132490286/9b6d67ed-a236-408d-a7f3-a383ca748f92)
 
 ## Visão Geral
 
